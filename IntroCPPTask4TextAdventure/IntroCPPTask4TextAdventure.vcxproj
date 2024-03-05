@@ -128,16 +128,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GameApplication.cpp" />
+    <ClCompile Include="GameStates.cpp" />
     <ClCompile Include="IntroCPPTask4TextAdventure.cpp" />
     <ClCompile Include="MyString.cpp" />
-    <ClCompile Include="PlaySate.cpp" />
+    <ClCompile Include="PlayState.cpp" />
     <ClCompile Include="TestsMyString.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameApplication.h" />
     <ClInclude Include="GameStates.h" />
     <ClInclude Include="MyString.h" />
-    <ClInclude Include="PlaySate.h" />
+    <ClInclude Include="PlayState.h" />
     <ClInclude Include="TestsMyString.h" />
     <ClInclude Include="Vec2.h" />
   </ItemGroup>

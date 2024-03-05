@@ -8,10 +8,11 @@ public:
 	GameApplication();
 	~GameApplication();
 
-	void ChangeState(EGameState newstate);
-	void ChangeToNextState();
-
+	void Run();
 	void Quit();
+
+	void ChangeState(EGameState newState);
+	void ChangeToNextState();
 
 private:
 	GameStates* currentGameState = nullptr;
