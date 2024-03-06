@@ -19,6 +19,9 @@ void GameApplication::Run()
 
 	while (!shouldExit == false)
 	{
+		//Update
+		//----------------------------
+
 		ChangeToNextState();
 
 		currentGameState->Update();
