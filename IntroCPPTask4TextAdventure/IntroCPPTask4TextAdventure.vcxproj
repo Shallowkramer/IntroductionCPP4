@@ -127,16 +127,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BoxOfDonuts.cpp" />
+    <ClCompile Include="Cat.cpp" />
+    <ClCompile Include="Dog.cpp" />
     <ClCompile Include="GameApplication.cpp" />
     <ClCompile Include="GameStates.cpp" />
     <ClCompile Include="IntroCPPTask4TextAdventure.cpp" />
+    <ClCompile Include="Lamp.cpp" />
     <ClCompile Include="MyString.cpp" />
     <ClCompile Include="PlayState.cpp" />
     <ClCompile Include="TestsMyString.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BoxOfDonuts.h" />
+    <ClInclude Include="Cat.h" />
+    <ClInclude Include="Dog.h" />
     <ClInclude Include="GameApplication.h" />
     <ClInclude Include="GameStates.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="Lamp.h" />
     <ClInclude Include="MyString.h" />
     <ClInclude Include="PlayState.h" />
     <ClInclude Include="TestsMyString.h" />

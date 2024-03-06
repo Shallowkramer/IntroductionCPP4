@@ -19,6 +19,12 @@
     <Filter Include="Source Files\Gamestates">
       <UniqueIdentifier>{298a0fd7-60f8-48b1-8fae-2abe5801a501}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\items">
+      <UniqueIdentifier>{df752dcf-f4e5-41da-9ea0-094921c1b2d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\items">
+      <UniqueIdentifier>{5f3205b5-8103-4f21-9f11-fec42cc81064}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IntroCPPTask4TextAdventure.cpp">
@@ -39,6 +45,18 @@
     <ClCompile Include="GameStates.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Lamp.cpp">
+      <Filter>Source Files\items</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxOfDonuts.cpp">
+      <Filter>Source Files\items</Filter>
+    </ClCompile>
+    <ClCompile Include="Cat.cpp">
+      <Filter>Source Files\items</Filter>
+    </ClCompile>
+    <ClCompile Include="Dog.cpp">
+      <Filter>Source Files\items</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vec2.h">
@@ -58,6 +76,21 @@
     </ClInclude>
     <ClInclude Include="PlayState.h">
       <Filter>Header Files\Gamestates</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Header Files\items</Filter>
+    </ClInclude>
+    <ClInclude Include="Dog.h">
+      <Filter>Header Files\items</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxOfDonuts.h">
+      <Filter>Header Files\items</Filter>
+    </ClInclude>
+    <ClInclude Include="Cat.h">
+      <Filter>Header Files\items</Filter>
+    </ClInclude>
+    <ClInclude Include="Lamp.h">
+      <Filter>Header Files\items</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
