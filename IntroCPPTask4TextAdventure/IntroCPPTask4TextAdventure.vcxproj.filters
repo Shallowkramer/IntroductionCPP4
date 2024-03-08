@@ -42,9 +42,6 @@
     <ClCompile Include="PlayState.cpp">
       <Filter>Source Files\Gamestates</Filter>
     </ClCompile>
-    <ClCompile Include="GameStates.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Lamp.cpp">
       <Filter>Source Files\items</Filter>
     </ClCompile>
@@ -56,6 +53,9 @@
     </ClCompile>
     <ClCompile Include="Dog.cpp">
       <Filter>Source Files\items</Filter>
+    </ClCompile>
+    <ClCompile Include="Room.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="Lamp.h">
       <Filter>Header Files\items</Filter>
+    </ClInclude>
+    <ClInclude Include="Room.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
