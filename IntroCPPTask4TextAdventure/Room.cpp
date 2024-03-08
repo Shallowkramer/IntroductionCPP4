@@ -55,6 +55,41 @@ void Room::SetUp(Items itemIn)
 	}
 }
 
+void Room::SetUp(int i)
+{
+	Items item;
+
+	switch (i)
+	{
+	case 0: // Lamp
+		item = Items::Lamp;
+		break;
+
+	case 1: //BoxOfDonuts
+		item = Items::BoxOfDonuts;
+		break;
+
+	case 2: //Cat
+		item = Items::Cat;
+		break;
+
+	case 3: //Dog
+		item = Items::Dog;
+		break;
+
+	case 4: //Empty
+		item = Items::Empty;
+		break;
+
+	default:
+		this->item = nullptr;
+		this->description = new MyString("How did we even get here");
+		return;
+	}
+
+	SetUp(item);
+}
+
 void Room::Description() const
 {
 	description->WriteToConsole();
