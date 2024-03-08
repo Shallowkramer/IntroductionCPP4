@@ -46,6 +46,7 @@ void PlayState::Load()
 
 void PlayState::Update()
 {
+	Draw();
 	//TODO:
 	//Room should print its description
 	//Ask the user for an action/input

@@ -17,7 +17,7 @@ void GameApplication::Run()
 
 	ChangeState(EGameState::PLAY);
 
-	while (!shouldExit == false)
+	while (shouldExit == false)
 	{
 		//Update
 		//----------------------------
