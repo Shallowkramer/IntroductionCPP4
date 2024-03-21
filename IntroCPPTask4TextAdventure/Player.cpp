@@ -211,6 +211,8 @@ void Player::FindSpellInRange(int currentLetter)
 {
 	int start = FindSpellInRangeStart(currentLetter);
 	int amountOfSpellsContainedInFirstLetter = numberOfSpellStartLetter[currentLetter];
+
+	
 }
 
 int Player::FindSpellInRangeStart(int currentLetter)
