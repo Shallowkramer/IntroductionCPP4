@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include "Room.h"
 
 class MyString;
 
@@ -11,22 +12,16 @@ public:
 	Player();
 	~Player();
 
-	bool FindSpell(MyString spell);
-
-	void AddNewSpell(const char* newSpell, int insertAt);
+	void CastSpell(MyString& spell);
 
 private:
 	//Variables
-	int numberOfSpellStartLetter[26];
 
-	std::vector<MyString> spells;
+	std::vector<MyString> newSpellBook;
 
 	//Functions
-	void StarterSpells();
 	
-	void FindSpellInRange(int currentLetter);
-	int FindSpellInRangeStart(int currentLetter);
-
+	void ExecuteSpell(MyString& spell);
 	
 
 	
