@@ -21,8 +21,6 @@ PlayState::~PlayState()
 
 void PlayState::Load()
 {
-	userInput = new MyString();
-
 	player = new Player();
 
 	rooms = new Room * [rows];
@@ -58,32 +56,32 @@ void PlayState::Update()
 
 	std::cout << "What would you like to do now? (move / use <item> / inspect <item>)" << std::endl;
 
-	userInput->ReadFromConsole();
+	userInput.ReadFromConsole();
 
-	userInput->ToLower();
+	userInput.ToLower();
 
 	//Parsing and According Logic
-	switch (userInput->CharacterAt(0))
+	switch (userInput.CharacterAt(0))
 	{
 	case'm': //player trying to move
-		if (userInput->Find("move") != -1)
+		if (userInput.Find("move") != -1)
 		{
-			if (userInput->Find("north") != -1)
+			if (userInput.Find("north") != -1)
 			{
 				//Move player north
 				TryMove('n');
 			}
-			else if (userInput->Find("south") != -1)
+			else if (userInput.Find("south") != -1)
 			{
 				//Move player south
 				TryMove('s');
 			}
-			else if (userInput->Find("east") != -1)
+			else if (userInput.Find("east") != -1)
 			{
 				//Move player east
 				TryMove('e');
 			}
-			else if (userInput->Find("west") != -1)
+			else if (userInput.Find("west") != -1)
 			{
 				//Move player west
 				TryMove('w');
@@ -95,21 +93,21 @@ void PlayState::Update()
 		}
 		
 	case'u': //player trying to use
-		if (userInput->Find("use") != -1)
+		if (userInput.Find("use") != -1)
 		{
-			if (userInput->Find("lamp") != -1)
+			if (userInput.Find("lamp") != -1)
 			{
 				TryUse('l');
 			}
-			else if (userInput->Find("box of donuts") != -1)
+			else if (userInput.Find("box of donuts") != -1)
 			{
 				TryUse('b');
 			}
-			else if (userInput->Find("cat") != -1)
+			else if (userInput.Find("cat") != -1)
 			{
 				TryUse('c');
 			}
-			else if (userInput->Find("dog") != -1)
+			else if (userInput.Find("dog") != -1)
 			{
 				TryUse('d');
 			}
@@ -121,21 +119,21 @@ void PlayState::Update()
 		break;
 
 	case'i': //player trying to inspect something
-		if (userInput->Find("inspect") != -1)
+		if (userInput.Find("inspect") != -1)
 		{
-			if (userInput->Find("lamp") != -1)
+			if (userInput.Find("lamp") != -1)
 			{
 				TryInspect('l');
 			}
-			else if (userInput->Find("box of donuts") != -1)
+			else if (userInput.Find("box of donuts") != -1)
 			{
 				TryInspect('b');
 			}
-			else if (userInput->Find("cat") != -1)
+			else if (userInput.Find("cat") != -1)
 			{
 				TryInspect('c');
 			}
-			else if (userInput->Find("dog") != -1)
+			else if (userInput.Find("dog") != -1)
 			{
 				TryInspect('d');
 			}
@@ -152,6 +150,8 @@ void PlayState::Update()
 	}
 
 	system("pause");
+
+
 }
 
 void PlayState::Draw()
@@ -195,7 +195,6 @@ void PlayState::Draw()
 
 void PlayState::Unload()
 {
-	delete userInput;
 	delete player;
 
 	for (int i = 0; i < columns; i++)

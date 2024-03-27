@@ -1,6 +1,7 @@
 #pragma once
 #include "GameStates.h"
 #include "Vec2.h"
+#include "MyString.h"
 
 class Room;
 class Player;
@@ -28,7 +29,7 @@ private:
 	int playerPosX;
 	int	playerPosY;
 
-	MyString* userInput;
+	MyString userInput;
 
 	//Functions
 	void TryMove(char c);
