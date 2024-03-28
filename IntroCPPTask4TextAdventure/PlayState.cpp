@@ -54,7 +54,7 @@ void PlayState::Update()
 
 	rooms[playerPosY][playerPosX].Description();
 
-	std::cout << "What would you like to do now? (move / use <item> / inspect <item>)" << std::endl;
+	std::cout << "What would you like to do now? (move / use <item> / inspect <item> / cast <spell>)" << std::endl;
 
 	userInput.ReadFromConsole();
 
@@ -141,6 +141,21 @@ void PlayState::Update()
 			{
 				std::cout << "Couldn't figure out what you were trying to inspect..." << std::endl;
 			}
+		}
+		break;
+
+	case'c': //player tries to cast
+		if (userInput.Find("cast") != -1)
+		{
+			MyString tempString(userInput.SplitString(0, userInput.LengthNullIncluded(), "cast "));
+
+
+
+			player->CastSpell(tempString);
+		}
+		else
+		{
+			std::cout << "Couldn't figure out what you were trying cast" << std::endl;
 		}
 		break;
 

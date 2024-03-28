@@ -29,11 +29,12 @@ void Player::CastSpell(MyString& spell)
 
 	int r = spellbookLength - 1;
 
+	
 	while (true)
 	{
 		int middle = (l + r) / 2;
 
-		if (newSpellBook[middle].EqualTo(spell))
+		if (newSpellBook[middle] == spell)
 		{
 			ExecuteSpell(spell);
 			break;

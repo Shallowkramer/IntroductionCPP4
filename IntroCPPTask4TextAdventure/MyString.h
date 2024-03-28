@@ -60,6 +60,8 @@ public:
 	MyString operator+(const MyString& _other);
 	MyString operator+=(const MyString& _other);
 
+	char* SplitString(int splitStringStart, int splitStringEnd, const char* find);
+
 	//Public Variables
 
 private:
@@ -72,7 +74,7 @@ private:
 	
 	int* FindAllInstances(const char* c);
 	int LengthAllInstances(const int* allInstances, int initialLength);
-	char* SplitString(int splitStringStart, int splitStringEnd, const char* find);
+	
 
 };
 

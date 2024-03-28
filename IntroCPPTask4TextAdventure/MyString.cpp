@@ -77,7 +77,7 @@ char MyString::CharacterAt(size_t _index)
 
 bool MyString::EqualTo(const MyString& _str)
 {
-	if (strcmp(string, _str.string) == 0 || strlen(string) == strlen(_str.string))
+	if (strcmp(string, _str.string) == 0 && strlen(string) == strlen(_str.string))
 	{
 		return true;
 	}
@@ -272,11 +272,10 @@ char* MyString::SplitString(int splitStringStart, int splitStringEnd, const char
 
 	char* newString = new char[splitStringEnd];
 
-	//if split string start is not equal to 0 increase it by the length of find
-	if (splitStringStart != 0)
-	{
-		splitStringStart += strlen(find);
-	}
+	//sets splitStringStart to be equal to itself plus 0
+	
+	splitStringStart += strlen(find);
+	
 	
 	//takes new string and cycles through to replace with string input prior to split string end
 	for (int i = splitStringStart; i <= splitStringEnd; i++)
