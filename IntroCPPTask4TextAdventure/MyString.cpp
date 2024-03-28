@@ -207,7 +207,7 @@ int MyString::Find(int _startIndex, const char* c)
 {
 	if (strlen(c) <= Length())
 	{
-		for (int i = _startIndex; i < Length() - strlen(c); i++)
+		for (int i = _startIndex; i < Length() - strlen(c)+1; i++)
 		{
 			if (CompareAt(i, c))
 			{
@@ -234,7 +234,7 @@ int* MyString::FindAllInstances(const char* c)
 	{
 		int findInstancesIndexer = 0;
 
-		for (int i =0; i<Length() - strlen(c); i++)
+		for (int i =0; i<Length() - strlen(c) +1; i++)
 		{
 			if (CompareAt(i, c))
 			{
