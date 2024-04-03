@@ -20,7 +20,7 @@ Player::~Player()
 void Player::CastSpell(MyString& spell)
 {
 	//length of spell book
-	int spellbookLength = 3;
+	int spellbookLength = newSpellBook.size();
 
 
 	std::sort(newSpellBook.begin(), newSpellBook.end());
@@ -30,7 +30,7 @@ void Player::CastSpell(MyString& spell)
 	int r = spellbookLength - 1;
 
 	
-	while (true)
+	while (l <= r)
 	{
 		int middle = (l + r) / 2;
 
